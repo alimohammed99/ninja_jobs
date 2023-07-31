@@ -20,12 +20,14 @@
 
 export default {
     props: ['ic'],
-    // data() {
-    //     return {
-    //         job_id: this.$route.params.ic
-    //             $route.params.ic" returns the route parameter, and this is dynamic.It changes per whatever you add as the parameter.
-    //     }
-    // }
+    mounted() {
+        // Several explanations about fetching and all the below functions can be found in the jobs page ( jobs.vue ).
+        // I'm fetching individual job here so I have to specify the job id to know which one...
+        fetch(' http://localhost:3000/jobs/' + this.ic)
+            .then(res => res.json())
+            .then(data => this.job = data)
+            .catch(err => console.log(err.message))
+    }
 } 
 </script>
 
