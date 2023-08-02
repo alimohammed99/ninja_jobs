@@ -1,14 +1,21 @@
 <template>
     <h1 style="color:grey; text-decoration:">JOBS</h1>
-    <div class="job" v-for="job in jobs" :key="job.id">
-        <!-- For loops in VUE must have a key attribute, and it must be unique for each item. That's why I picked the id. ID is unique. -->
-        <router-link :to="{ name: 'JobDetails', params: { ic: job.id } }">
-            <!-- I binded this one coz I wanna bind to an object. -->
-            <!-- JobDetails is the page (name of the route) I wanna go when any of the Job title is clicked. -->
-            <!-- And I have to send in the ID too (parameter), so it's gonna know which of the jobs did User click. -->
-            <h2> {{ job.title }} </h2>
-        </router-link>
-        <!-- The Jobs are surrounded with <router-link> coz I want each Job title to link to the appropriate places, which is the Jobs details page I created.  -->
+    <!-- I could have used only 'v-if'. If I use only v-if, that's for sure true coz initially, "jobs" is an array and that's positive therefore it's not really empty or null, unlike "job" inside "JobDetails.vue", so it will not even bother about the 'else' statement. -->
+    <!-- I want the browser to flash the 'else' condition quickly before displaying the right contents, so saying "jobs.length" will first of all throw the 'else' condition. Then when it has been mounted, it'll show the right contents. -->
+    <div v-if="jobs.length">
+        <div class="job" v-for="job in jobs" :key="job.id">
+            <!-- For loops in VUE must have a key attribute, and it must be unique for each item. That's why I picked the id. ID is unique. -->
+            <router-link :to="{ name: 'JobDetails', params: { ic: job.id } }">
+                <!-- I binded this one coz I wanna bind to an object. -->
+                <!-- JobDetails is the page (name of the route) I wanna go when any of the Job title is clicked. -->
+                <!-- And I have to send in the ID too (parameter), so it's gonna know which of the jobs did User click. -->
+                <h2> {{ job.title }} </h2>
+            </router-link>
+            <!-- The Jobs are surrounded with <router-link> coz I want each Job title to link to the appropriate places, which is the Jobs details page I created.  -->
+        </div>
+    </div>
+    <div v-else>
+        <p style="font-size:90px; color:tomato">Loading Job details.....</p>
     </div>
 </template>
 

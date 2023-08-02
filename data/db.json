@@ -3,17 +3,17 @@
         {
             "title": "Ninja UI / UX Designer",
             "id": 1,
-            "details": "Design"
+            "details": "The scope of this job is on creating the user interface based on user research insights. To achieve this, designers use processes such as wireframing and prototyping, followed by usability testing. The UI/UX design title is the most comprehensive and may include some or all of the below functions. User experience (UX) and user interface (UI) designers create digital products and interfaces that are user-friendly and intuitive. If you are interested in working with the latest technologies and want to give customers a favourable experience of your digital products, it might be the career for you."
         },
         {
             "title": "Ninja Web Developer",
             "id": 2,
-            "details": "Programming"
+            "details": "Web developers create and maintain websites. They are also responsible for the site's technical aspects, such as its performance and capacity, which are measures of a website's speed and how much traffic the site can handle. A Web Developer is responsible for programming code that tells websites and web applications how to operate. Web Developers typically specialize in either “front-end” (“client-side”) development or “back-end” (“server-side”) development. Some versatile and highly-sought-after professionals do both, and they’re called “Full-Stack Developers.”"
         },
         {
             "title": "Ninja Application Developer",
             "id": 3,
-            "details": "Programming"
+            "details": "Application developers write software programs for use across mobile operating systems, including Apple, Android, and Windows devices. Once applications are created, application developers are also responsible for testing the application and providing updates whenever necessary. An app developer is a software developer who specializes in creating mobile applications. Mobile apps are designed to run on smartphones, tablets, or other mobile devices and are typically available through app stores or other distribution channels. App developers may work on a variety of platforms, such as Android or iOS, and may use a variety of programming languages and tools."
         }
     ]
 }
